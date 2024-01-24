@@ -128,8 +128,6 @@ has _usa => (
 
 Create a new C<Geography::States::Borders> object.
 
-=for Pod::Coverage BUILD
-
 =head2 borders
 
   @states = $geo->borders($state_code);
