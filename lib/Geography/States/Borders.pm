@@ -13,10 +13,8 @@ use namespace::clean;
 
   use Geography::States::Borders ();
   my $geo = Geography::States::Borders->new(country => 'usa');
-  my $state_code = 'HI';
-  my @states = $geo->borders($state_code); # empty list
-  $state_code = 'OR';
-  @states = $geo->borders($state_code);    # CA ID NV WA
+  my $states = $geo->borders('HI'); # empty list
+  $states = $geo->borders('OR');    # CA ID NV WA
 
 =head1 DESCRIPTION
 
