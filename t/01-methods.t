@@ -8,13 +8,12 @@ use_ok 'Geography::States::Borders';
 
 my $obj = new_ok 'Geography::States::Borders' => [
     country => 'usa',
-    verbose => 1,
 ];
 
-is $obj->verbose, 1, 'verbose';
+is $obj->country, 'usa', 'country';
 
 my $got = $obj->borders;
-is_deeply $got->{AK}, [], 'borders';
-is_deeply $got->{OR}, [qw(CA ID NV WA)], 'borders';
+is_deeply $got->{AK}, [], 'AK borders';
+is_deeply $got->{OR}, [qw(CA ID NV WA)], 'OR borders';
 
 done_testing();
