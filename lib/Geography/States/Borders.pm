@@ -12,7 +12,7 @@ use namespace::clean;
 =head1 SYNOPSIS
 
   use Geography::States::Borders ();
-  my $geo = Geography::States::Borders->new(country => 'usa');
+  my $geo = Geography::States::Borders->new(country => 'USA');
   my $states = $geo->borders('HI'); # empty list
   $states = $geo->borders('OR');    # CA ID NV WA
 
@@ -20,7 +20,7 @@ use namespace::clean;
 
 C<Geography::States::Borders> returns the borders of states and provinces.
 
-* Currently the only recognized countries are ...the C<usa>.
+* Currently the only recognized countries are ...the C<usa> and Canada.
 
 =head1 ATTRIBUTES
 
