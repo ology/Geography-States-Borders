@@ -1,4 +1,10 @@
 Revision history for Geography-States-Borders
 
 {{$NEXT}}
+    - Oh Canada!
+
+0.0101 2024-01-24 12:54:01
+    - Remove the unneeded verbose attribute.
+
+0.0100 2024-01-24 11:02:16
     - Mint with Dist::Zilla.
