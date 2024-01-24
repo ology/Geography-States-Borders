@@ -40,20 +40,6 @@ has country => (
     default => sub { 'usa' },
 );
 
-=head2 verbose
-
-  $verbose = $geo->verbose;
-
-Show progress.
-
-=cut
-
-has verbose => (
-    is      => 'ro',
-    isa     => sub { croak "$_[0] is not valid" unless $_[0] =~ /^[01]$/ },
-    default => sub { 0 },
-);
-
 has _usa => (
     is      => 'ro',
     isa     => sub { croak "$_[0] is not a hash reference" unless ref $_[0] eq 'HASH' },
