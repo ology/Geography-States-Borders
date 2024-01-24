@@ -40,9 +40,31 @@ has country => (
     default => sub { 'usa' },
 );
 
+has _canada => (
+    is      => 'ro',
+    isa     => sub { croak "$_[0] is not valid" unless ref $_[0] eq 'HASH' },
+    default => sub {
+      {
+        AB => [qw(BC NT SK)],
+        BC => [qw(AB NT YT)],
+        MB => [qw(NU ON SK)],
+        NB => [qw(NS QC)],
+        NL => [qw(QC)],
+        NS => [qw(NB)],
+        NT => [qw(AB BC NU SK YT)],
+        NU => [qw(MB NT)],
+        ON => [qw(MB QC)],
+        PE => [],
+        QC => [qw(NB NL ON)],
+        SK => [qw(AB MB NT)],
+        YT => [qw(BC NT)],
+      }
+    },
+);
+
 has _usa => (
     is      => 'ro',
-    isa     => sub { croak "$_[0] is not a hash reference" unless ref $_[0] eq 'HASH' },
+    isa     => sub { croak "$_[0] is not valid" unless ref $_[0] eq 'HASH' },
     default => sub {
       {
         AK => [],
