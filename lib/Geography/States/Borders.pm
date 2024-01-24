@@ -30,12 +30,14 @@ C<Geography::States::Borders> returns the borders of states and provinces.
 
 Set the country.
 
+Default: C<usa>
+
 =cut
 
 has country => (
     is      => 'ro',
     isa     => sub { croak "$_[0] is not valid" unless $_[0] =~ /^[a-zA-Z]+$/ },
-    default => sub { 0 },
+    default => sub { 'usa' },
 );
 
 =head2 verbose
