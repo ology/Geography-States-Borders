@@ -2,7 +2,7 @@ package Geography::States::Borders;
 
 # ABSTRACT: Return the borders of states and provinces
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 use strictures 2;
 use Carp qw(croak);
