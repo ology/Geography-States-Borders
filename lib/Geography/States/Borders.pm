@@ -126,7 +126,7 @@ Return the bordering states of the given state code.
 
 sub borders {
     my ($self) = @_;
-    my $states = '_' . $self->country;
+    my $states = '_' . lc $self->country;
     return $self->$states();
 }
 
