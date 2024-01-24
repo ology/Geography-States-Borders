@@ -12,6 +12,7 @@ subtest canada => sub {
     ];
     is $obj->country, 'canada', 'country';
     my $got = $obj->borders;
+    is_deeply $got->{PE}, [], 'PE borders';
     is_deeply $got->{YT}, [qw(BC NT)], 'YT borders';
 };
 
