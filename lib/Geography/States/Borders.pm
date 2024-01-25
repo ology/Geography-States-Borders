@@ -97,6 +97,33 @@ has _canada => (
     },
 );
 
+has _netherlands => (
+    is       => 'ro',
+    init_arg => undef,
+    default  => sub {
+      {
+        DR  => [qw(OV FR GR)],
+        FL  => [qw(OV)],
+        FR  => [qw(FL GR DR OV)],
+        GE  => [qw(LI NB ZH UT OV)],
+        GR  => [qw(DR FR)],
+        LI  => [qw(NB GE)],
+        NB  => [qw(ZE ZH GE LI)],
+        NH  => [qw(ZH UT)],
+        OV  => [qw(GE FL FR DR)],
+        UT  => [qw(ZH NH GE)],
+        ZE  => [qw(NB)],
+        ZH  => [qw(NH UT GE NB)],
+        AW  => [],
+        CW  => [],
+        SX  => [],
+        BQ1 => [],
+        BQ2 => [],
+        BQ3 => [],
+      }
+    },
+);
+
 has _usa => (
     is       => 'ro',
     init_arg => undef,
