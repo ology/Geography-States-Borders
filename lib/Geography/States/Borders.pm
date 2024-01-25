@@ -41,9 +41,9 @@ has country => (
 );
 
 has _canada => (
-    is      => 'ro',
-    isa     => sub { croak "$_[0] is not valid" unless ref $_[0] eq 'HASH' },
-    default => sub {
+    is       => 'ro',
+    init_arg => undef,
+    default  => sub {
       {
         AB => [qw(BC NT SK)],
         BC => [qw(AB NT YT)],
@@ -63,9 +63,9 @@ has _canada => (
 );
 
 has _usa => (
-    is      => 'ro',
-    isa     => sub { croak "$_[0] is not valid" unless ref $_[0] eq 'HASH' },
-    default => sub {
+    is       => 'ro',
+    init_arg => undef,
+    default  => sub {
       {
         AK => [],
         AL => [qw(FL GA MS TN)],
