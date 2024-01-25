@@ -17,10 +17,11 @@ use namespace::clean;
 
 =head1 DESCRIPTION
 
-C<Geography::States::Borders> returns the borders of states and provinces.
+C<Geography::States::Borders> returns the border states (or provinces)
+of given states or provinces.
 
-* Currently the only recognized countries are Australia, Canada,
-Brazil, The Netherlands, and the USA.
+* Currently the recognized countries are Australia, Canada, Brazil,
+The Netherlands, and the USA.
 
 =head1 ATTRIBUTES
 
