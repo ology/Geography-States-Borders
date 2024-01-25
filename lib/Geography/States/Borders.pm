@@ -239,6 +239,8 @@ __END__
 
 =head1 SEE ALSO
 
+The F<t/methods.t> file in this distribution
+
 L<Moo>
 
 =cut
