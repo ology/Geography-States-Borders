@@ -220,9 +220,10 @@ Create a new C<Geography::States::Borders> object.
 
 =head2 borders
 
-  @states = $geo->borders($state_code);
+  $states = $geo->borders($state_code);
 
-Return the bordering states of the given state code.
+Return a hash reference of the bordering states of the given state
+code.
 
 =cut
 
