@@ -3,8 +3,26 @@ use strict;
 use warnings;
 
 use Test::More;
+use Test::Fatal;
 
 use_ok 'Geography::States::Borders';
+
+subtest invalid => sub {
+    like(
+        exception { Geography::States::Borders->new(country => 123) },
+        qr/is not valid/,
+        'constructor dies with invalid country',
+    );
+    my $obj = new_ok 'Geography::States::Borders' => [
+        country => 'narnia',
+    ];
+    is $obj->country, 'narnia', 'country';
+    like(
+        exception { $obj->borders },
+        qr/object method/,
+        'borders dies with invalid country',
+    );
+};
 
 subtest canada => sub {
     my $obj = new_ok 'Geography::States::Borders' => [
