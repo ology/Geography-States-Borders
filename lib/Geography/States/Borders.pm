@@ -21,7 +21,7 @@ C<Geography::States::Borders> returns the border states (or provinces)
 of given states or provinces.
 
 * Currently the recognized countries are Australia, Canada, Brazil,
-The Netherlands, and the USA.
+the Netherlands, and the USA.
 
 =head1 ATTRIBUTES
 
