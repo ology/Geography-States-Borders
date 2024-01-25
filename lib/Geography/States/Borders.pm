@@ -5,7 +5,6 @@ package Geography::States::Borders;
 our $VERSION = '0.0102';
 
 use strictures 2;
-use Carp qw(croak);
 use Moo;
 use namespace::clean;
 
@@ -36,7 +35,7 @@ Default: C<usa>
 
 has country => (
     is      => 'ro',
-    isa     => sub { croak "$_[0] is not valid" unless $_[0] =~ /^[a-zA-Z]+$/ },
+    isa     => sub { die "$_[0] is not valid" unless $_[0] =~ /^[a-zA-Z]+$/ },
     default => sub { 'usa' },
 );
 
