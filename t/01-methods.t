@@ -44,6 +44,16 @@ subtest canada => sub {
     is_deeply $got->{YT}, [qw(BC NT)], 'YT borders';
 };
 
+subtest netherlands => sub {
+    my $obj = new_ok 'Geography::States::Borders' => [
+        country => 'netherlands',
+    ];
+    is $obj->country, 'netherlands', 'country';
+    my $got = $obj->borders;
+    is_deeply $got->{AW}, [], 'AW borders';
+    is_deeply $got->{UT}, [qw(ZH NH GE)], 'UT borders';
+};
+
 subtest usa => sub {
     my $obj = new_ok 'Geography::States::Borders' => [
         country => 'usa',
