@@ -11,9 +11,9 @@ use namespace::clean;
 =head1 SYNOPSIS
 
   use Geography::States::Borders ();
-  my $geo = Geography::States::Borders->new(country => 'USA');
-  my $states = $geo->borders('HI'); # empty list
-  $states = $geo->borders('OR');    # CA ID NV WA
+  my $geo = Geography::States::Borders->new(country => 'Netherlands');
+  my $states = $geo->borders('AW'); # empty list
+  $states = $geo->borders('UT');    # ZH NH GE
 
 =head1 DESCRIPTION
 
