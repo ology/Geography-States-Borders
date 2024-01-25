@@ -40,6 +40,23 @@ has country => (
     default => sub { 'usa' },
 );
 
+has _australia => (
+    is       => 'ro',
+    init_arg => undef,
+    default  => sub {
+      {
+        ACT => [qw(NSW)],
+        NSW => [qw(ACT VIC SA QLD)],
+        NT  => [qw(WA QLD SA)],
+        QLD => [qw(NSW SA NT)],
+        SA  => [qw(WA NT QLD NSW VIC )],
+        TAS => [],
+        VIC => [qw(SA NSW)],
+        WA  => [qw(NT SA)],
+      }
+    },
+);
+
 has _brazil => (
     is       => 'ro',
     init_arg => undef,
