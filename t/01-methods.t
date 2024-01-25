@@ -24,6 +24,16 @@ subtest invalid => sub {
     );
 };
 
+subtest australia => sub {
+    my $obj = new_ok 'Geography::States::Borders' => [
+        country => 'australia',
+    ];
+    is $obj->country, 'australia', 'country';
+    my $got = $obj->borders;
+    is_deeply $got->{TAS}, [], 'TAS borders';
+    is_deeply $got->{QLD}, [qw(NSW SA NT)], 'QLD borders';
+};
+
 subtest brazil => sub {
     my $obj = new_ok 'Geography::States::Borders' => [
         country => 'brazil',
