@@ -19,7 +19,8 @@ use namespace::clean;
 
 C<Geography::States::Borders> returns the borders of states and provinces.
 
-* Currently the only recognized countries are Canada, Brazil, and the USA.
+* Currently the only recognized countries are Canada, Brazil, The
+Netherlands, and the USA.
 
 =head1 ATTRIBUTES
 
