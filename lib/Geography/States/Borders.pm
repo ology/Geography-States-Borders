@@ -39,6 +39,42 @@ has country => (
     default => sub { 'usa' },
 );
 
+has _brazil => (
+    is       => 'ro',
+    init_arg => undef,
+    default  => sub {
+      {
+        AC => [qw(AM RO)],
+        AL => [qw(BA PE SE)],
+        AM => [qw(AC MT RO RR)],
+        AP => [qw(PA)],
+        BA => [qw(ES MG GO TO PI PE AL SE)],
+        CE => [qw(RN PB PE PI )],
+        DF => [qw(GO MG)],
+        ES => [qw(RJ MG BA)],
+        GO => [qw(DF MG MS MT TO BA)],
+        MA => [qw(PI TO PA)],
+        MG => [qw(SP MS GO DF BA ES RJ)],
+        MS => [qw(MT GO MG SP PR)],
+        MT => [qw(RO AM PA TO GO MS)],
+        PA => [qw(MT AM RR AP MA TO)],
+        PB => [qw(PE CE RN)],
+        PE => [qw(AL BA PI CE PB)],
+        PI => [qw(BA TO MA CE PE)],
+        PR => [qw(MS SP SC)],
+        RJ => [qw(SP MG ES)],
+        RN => [qw(PB CE)],
+        RO => [qw(AC AM MT)],
+        RR => [qw(AM PA)],
+        RS => [qw(SC)],
+        SC => [qw(RS PR)],
+        SE => [qw(BA AL)],
+        SP => [qw(PR MS MG RJ)],
+        TO => [qw(GO MT PA MA PI BA)],
+      }
+    },
+);
+
 has _canada => (
     is       => 'ro',
     init_arg => undef,
