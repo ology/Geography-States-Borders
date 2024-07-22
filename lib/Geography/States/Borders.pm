@@ -12,7 +12,7 @@ use namespace::clean;
 
   use Geography::States::Borders ();
   my $geo = Geography::States::Borders->new(country => 'Netherlands');
-  my $states = $geo->borders('AW'); # empty list
+  my $states = $geo->borders('XX'); # empty list
   $states = $geo->borders('UT');    # ZH NH GE
 
 =head1 DESCRIPTION
@@ -32,6 +32,14 @@ the Netherlands, and the USA.
 Set the country.
 
 Default: C<usa>
+
+Options:
+
+  australia
+  brazil
+  canada
+  netherlands
+  usa
 
 =cut
 
